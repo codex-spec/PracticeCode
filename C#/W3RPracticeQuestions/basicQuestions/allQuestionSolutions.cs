@@ -66,7 +66,6 @@ public class w3rbasicPQ
             Console.WriteLine("invalid input");
             break;
         }
-            
     }
     
     //question 8 
@@ -90,6 +89,49 @@ public class w3rbasicPQ
         return res;
     }
     
+    //question 11
+    public static void messageOfAge(int n) {
+        Console.WriteLine("this is your age" + n);
+    }
+    
+    //question 12
+    // public static string numberInRows(int n) {
+    //     string out = "" + n + " " + n + " " + n + " " + n +"\n";
+    //     out += "" + n+""+n+""+n+""+n+"\n";
+    //     out += "" + n + " " + n + " " + n + " " + n +"\n";
+    //     out += "" + n+""+n+""+n+""+n+"\n";
+    //     return out;
+    // }
+    
+    //question 13
+    public static string repeatNumberInRow(int n) {
+        string res = ""+n+""+n+""+n+"\n";
+        res += ""+n+" "+n+"\n";
+        res += ""+n+" "+n+"\n";
+        res += ""+n+""+n+""+n+"";
+        return res;
+    }
+    
+    //question 14 
+    public static string celsiusToKelvinAndFarenheit(int c) {
+        double k = c + 273.15;
+        double f = (c * (9/5)) + 32;
+        string res = "the degrees in c is " + c 
+        + "that c in kelvin is" + k + "and in farenheit is" + f;
+        return res;
+    }
+    
+    //question 15 
+    public static string removeIndexFromString(string str, char v) {
+        string res = "";
+         for (let i = 0; i < str.length; i++) {
+               if(str[i] != v) {
+                   res += str[i];
+               }
+            }
+        return res;
+    }
+    
     public static void Main(string[] args)
     {
         Console.WriteLine ("Try programiz.pro");
@@ -97,6 +139,9 @@ public class w3rbasicPQ
         Console.WriteLine(sumOfTwo(4, 3));
         
         operation();
+        //Console.WriteLine(numberInRows(25));
+        Console.WriteLine("\n");
+        Console.WriteLine(repeatNumberInRow(3));
         
     }
 }

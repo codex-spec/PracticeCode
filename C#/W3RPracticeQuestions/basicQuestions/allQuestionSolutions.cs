@@ -156,6 +156,16 @@ public class w3rbasicPQ
         }
         return Math.Abs(n1-n2);
     }
+
+    //question 21
+    public static bool check20OrSum20(int n1, int n2) {
+        return (n1 == 20 || n2 == 20 || ((n1+n2) == 20));
+    }
+    
+    //question 22
+    public static bool within20Of100Or200(int n) {
+        return (n >= 80 && n <= 120 || (n >= 180 && n <= 220));
+    }
     
     public static void Main(string[] args)
     {
@@ -168,6 +178,9 @@ public class w3rbasicPQ
         Console.WriteLine(checkIfTwoIntAreDiffPosAndNeg(-25, -6));
         Console.WriteLine(sumOrTriple(10,10));
         Console.WriteLine(abosluteDiffDoulbeIfFGS(4, 5));
+        Console.WriteLine(check20OrSum20(10, 10));
+        Console.WriteLine(within20Of100Or200(87));
+        Console.WriteLine(within20Of100Or200(287));
         Console.WriteLine ("Try programiz.pro");
     }
 }

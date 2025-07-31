@@ -122,26 +122,52 @@ public class w3rbasicPQ
     }
     
     //question 15 
-    public static string removeIndexFromString(string str, char v) {
-        string res = "";
-         for (let i = 0; i < str.length; i++) {
-               if(str[i] != v) {
-                   res += str[i];
-               }
-            }
-        return res;
+    public static string removeAChar(string str, int ind) {
+        return str.Remove(ind, 1);
+    }
+    
+    //question 16
+    public static string swapFirstAndLast(string str) {
+        return (str.Length > 1) ? str.Substring(str.Length-1) 
+        + str.Substring(1, str.Length - 2) + str.Substring(0, 1) : str;
+    }
+    
+    //question 17
+    public static string addFirstCharToFrontAndBack(string str) {
+        return str.Substring(0,1) + str + str.Substring(0,1);
+    }
+    
+    //question  18 
+    public static bool checkIfTwoIntAreDiffPosAndNeg(int n1, int n2) {
+        return (n1 > 0 && n2 < 0 || (n1 < 0 && n2 > 0));
+    }
+    
+    //question 19 
+    public static int sumOrTriple(int n1, int n2) {
+        return (n1 != n2) ? (n1+n2) : (3*(n1+n2));
+    }
+    
+    //questiom 20 
+    public static int abosluteDiffDoulbeIfFGS(int n1, int n2) {
+        if(n1 > n2) {
+            int sum = Math.Abs(n1-n2);
+            sum = 2 * sum;
+            return sum;
+        }
+        return Math.Abs(n1-n2);
     }
     
     public static void Main(string[] args)
     {
+        Console.WriteLine(removeAChar("abdullah", 2));
+        Console.WriteLine(swapFirstAndLast("hello"));
+        Console.WriteLine(addFirstCharToFrontAndBack("hello world"));
+        Console.WriteLine(checkIfTwoIntAreDiffPosAndNeg(-25, 6));
+        Console.WriteLine(checkIfTwoIntAreDiffPosAndNeg(5, -6));
+        Console.WriteLine(checkIfTwoIntAreDiffPosAndNeg(25, 6));
+        Console.WriteLine(checkIfTwoIntAreDiffPosAndNeg(-25, -6));
+        Console.WriteLine(sumOrTriple(10,10));
+        Console.WriteLine(abosluteDiffDoulbeIfFGS(4, 5));
         Console.WriteLine ("Try programiz.pro");
-        Console.WriteLine(helloName("sarvarei"));
-        Console.WriteLine(sumOfTwo(4, 3));
-        
-        operation();
-        //Console.WriteLine(numberInRows(25));
-        Console.WriteLine("\n");
-        Console.WriteLine(repeatNumberInRow(3));
-        
     }
 }
